@@ -1,0 +1,272 @@
+/*MAIN STYLING*/
+
+body{
+    font-family: 'Droid Serif', serif;
+    padding: 0px;
+    overflow-x: hidden;
+    color: #fff;
+    font-size: 18px;
+
+}
+.banner{
+    background:$forest;
+    text-align: center;
+    font-size: 1.5em;
+    padding: 10px;
+}
+.testimonialsBanner{
+    background: $slate;
+    text-align: center;
+    padding: $pad20;
+    font-size: 1.5em;
+}
+
+.galleryBanner{
+    background: $faded;
+    text-align: center;
+    padding: $pad20;
+    font-size: 1.5em;
+    color: #000;
+    border-bottom: 6px solid $lime;
+}
+
+.info{
+    line-height: 1.5;
+    font-size: 1.2em;
+    img{
+        background: $slate;
+        padding: 20px;
+        width: 18em;
+    }
+    .row{
+        padding: $pad20;
+        color:#000;
+    }
+    .row:nth-child(2){
+        background: $faded;
+    }
+}
+
+.services{
+    text-align: center;
+    background: $lime;
+    line-height: 1.5;
+}
+.services .row div{
+    padding: $pad20;
+}
+.services div:nth-child(2){
+    border-top: 2px solid $forest;
+    border-bottom: 2px solid $forest;
+
+}
+
+.vCenter{
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+footer{
+    text-align: center;
+    background: $slate;
+    padding: $pad20;
+    line-height: 1.5;
+    .row>div{
+        margin-bottom: 10px;
+    }
+}
+
+.blockquote-reverse{
+    padding: $pad20;
+    border-right:none;
+}
+
+.fa-quote-left{
+    color: $lime;
+    padding-right: 20px;
+}
+.quote{
+    color: #000;
+    background: $faded;
+    line-height: 1.5;
+    footer{
+        background: $faded;
+        text-align: inherit;
+        padding: 0px;
+    }
+}
+
+.testimonialsImage{
+    height: 12em;
+    overflow:hidden;
+    padding:0px;
+    img{
+        margin-top: 0em;
+    }
+}
+
+a .fa-facebook-official{
+    color: #fff;
+}
+
+
+/* Bootstap Overides */
+
+.navbar-brand{
+    height: auto;
+    background: $slate;
+    width: 100%;
+}
+
+.navbar .navbar-header{
+    width: initial;
+    position: relative;
+    a:focus,a,a:hover{
+        background-color:$slate;
+    }
+}
+
+.navbar-inverse{
+    background-color:$slate;
+    border-color: $forest;
+
+    .navbar-brand:hover{
+        background-color:$slate;
+    }
+
+    .navbar-nav {
+        width: initial;
+        text-align: center;
+        padding-top: 15px;
+        li {
+            display: inline-block;
+            width: 100%;
+            padding:0px;
+            margin-top: 46px;
+          a{
+            font-size: 1.5em;
+            padding: 0px;
+            line-height: initial;
+            color: #fff;
+            display: inline;
+            padding-bottom: 5px;
+            border-bottom: 6px solid transparent;
+            transition: border-bottom 0.2s ease-in-out;
+          }
+          a:hover{
+            border-bottom: 6px solid $lime;
+          }
+        }
+        li.active{
+            a, a:hover{
+                background-color:transparent;
+                border-bottom: 6px solid $lime;
+            }
+        }
+        li:last-child{
+            margin-top: 0px;
+        }
+    }
+}
+
+.navbar-collapse{
+    width: 100%;
+    float: none;
+}
+
+
+.img-responsive{
+    margin: 0 auto;
+}
+.jumbotron{
+    margin-top: -22px;
+    background: url("../images/mainImage.png") center center;
+    background-size: cover;
+    padding:10em;
+    margin-bottom: 0px;
+}
+.jumbotron.t-image{
+    background: url("../images/testimonial_mainImage.png") center 25%;
+    background-size: cover;
+}
+
+.jumbotron.g-image{
+    background: url("../images/gallery_mainImage.png") center 25%;
+    background-size: cover;
+}
+
+.gImages{
+    text-align: center;
+    img{
+        max-height: 30em;
+    }
+}
+
+
+/* MEDIA QUERIES*/
+@media (min-width:768px) and (max-width:884px){
+    .navbar-inverse{
+        .navbar-nav {
+            li{
+                margin-top: 4.2vw;
+            }
+        }
+    }
+
+}
+@media (min-width:768px){
+    .navbar .navbar-header{
+        width: 25%;
+        position: absolute;
+    }
+    .navbar-collapse{
+        width: 75%;
+        float: right;
+    }
+    .jumbotron{
+        padding-top:18em;
+    }
+    .navbar-inverse{
+    background-color:$forest;
+        .navbar-nav{
+             width: 100%;
+            li{
+                 width: 32%;
+            }
+            li:last-child{
+                max-width: 12em; 
+            }
+        }
+    }
+
+
+    .testimonialsBanner{
+        text-align: left;
+        padding-left: 10%;
+    }
+    .testimonialsImage img{
+        margin-top: -20em;
+    }
+
+    .services{
+         line-height: 2;
+    }
+    .services div:nth-child(2){
+        border:none;
+        border-left: 2px solid $forest;
+        border-right: 2px solid $forest;
+    }
+    .services>div{
+        padding:$pad20;
+    }
+
+    .gImages img{
+        max-height: 15em;
+    }
+
+    footer .row>div{
+    margin-bottom: none;
+    }
+
+}
