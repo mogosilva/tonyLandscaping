@@ -117,6 +117,7 @@ a .fa-facebook-official{
     height: auto;
     background: $slate;
     width: 100%;
+    padding-top:0px;
 }
 
 .navbar .navbar-header{
@@ -143,7 +144,7 @@ a .fa-facebook-official{
             display: inline-block;
             width: 100%;
             padding:0px;
-            margin-top: 46px;
+            margin: 20px 0px;
           a{
             font-size: 1.5em;
             padding: 0px;
@@ -165,7 +166,8 @@ a .fa-facebook-official{
             }
         }
         li:last-child{
-            margin-top: 0px;
+            margin-top: 20px;
+            margin-bottom: 0px;
         }
     }
 }
@@ -205,17 +207,10 @@ a .fa-facebook-official{
 
 
 /* MEDIA QUERIES*/
-@media (min-width:768px) and (max-width:884px){
-    .navbar-inverse{
-        .navbar-nav {
-            li{
-                margin-top: 4.2vw;
-            }
-        }
-    }
-
-}
 @media (min-width:768px){
+    .navbar-brand{
+        padding-top:15px;
+    }
     .navbar .navbar-header{
         width: 25%;
         position: absolute;
@@ -233,9 +228,12 @@ a .fa-facebook-official{
              width: 100%;
             li{
                  width: 32%;
+                 margin:0px;
+                 margin-top: 46px;
             }
             li:last-child{
-                max-width: 12em; 
+                max-width: 12em;
+                margin-top: 0px; 
             }
         }
     }
@@ -267,6 +265,17 @@ a .fa-facebook-official{
 
     footer .row>div{
     margin-bottom: none;
+    }
+
+}
+
+@media (min-width:768px) and (max-width:884px){
+    .navbar-inverse{
+        .navbar-nav {
+            li{
+                margin-top: 4.2vw;
+            }
+        }
     }
 
 }
